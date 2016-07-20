@@ -11,44 +11,45 @@
   <title>Antoine HAMOUI | Developpeur Web | hamoui.antoine@gmail.com</title>
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/scrolling-nav.css" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
   <script>
-    $(window).load(function() {
-      $(".bg_load").fadeOut(10000);
-      $(".wrapper").fadeOut(5000);
-    })
+    $(window).load(function () {
+      $('.bg_load').fadeOut(10000);
+      $('.wrapper').fadeOut(5000);
+    });
   </script>
 
   <script>
-    var vid = document.getElementById("bgvid");
-    var pauseButton = document.querySelector("#polina button");
+    var vid = document.getElementById('bgvid');
+    var pauseButton = document.querySelector('#polina button');
 
     function vidFade() {
-      vid.classList.add("stopfade");
+      vid.classList.add('stopfade');
     }
 
-    vid.addEventListener('ended', function() {
+    vid.addEventListener('ended', function () {
       // only functional if "loop" is removed
       vid.pause();
+
       // to capture IE10
       vidFade();
     });
 
-
-    pauseButton.addEventListener("click", function() {
-      vid.classList.toggle("stopfade");
+    pauseButton.addEventListener('click', function () {
+      vid.classList.toggle('stopfade');
       if (vid.paused) {
         vid.play();
-        pauseButton.innerHTML = "Pause";
+        pauseButton.innerHTML = 'Pause';
       } else {
         vid.pause();
-        pauseButton.innerHTML = "Paused";
+        pauseButton.innerHTML = 'Paused';
       }
-    })
+    });
+
   </script>
 
 </head>
